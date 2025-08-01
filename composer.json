@@ -1,7 +1,6 @@
 {
     "name": "elisame/helper-creator",
     "description": "Custom helper creator for Laravel applications, designed for clean integration and automatic registration.",
-    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -39,5 +38,10 @@
         "test": "phpunit"
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "keywords": [
+        "laravel",
+        "helpers"
+    ],
+    "homepage": "https://github.com/elisame/helper-creator"
 }

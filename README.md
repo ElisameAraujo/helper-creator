@@ -1,5 +1,9 @@
 # 🛠️ HelperCreator
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/elisame/helper-creator.svg?style=flat-square)](https://packagist.org/packages/elisame/helper-creator)
+[![Total Downloads](https://img.shields.io/packagist/dt/elisame/helper-creator.svg?style=flat-square)](https://packagist.org/packages/elisame/helper-creator)
+[![License](https://img.shields.io/packagist/l/elisame/helper-creator.svg?style=flat-square)](https://packagist.org/packages/elisame/helper-creator)
+
 HelperCreator is a Laravel package that makes it easy to manage and autoload custom helpers. It automates registration in `composer.json`, creates backups, and keeps your project clean and functional.
 
 ---
