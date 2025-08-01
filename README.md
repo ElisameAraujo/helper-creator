@@ -1,16 +1,16 @@
 # 🛠️ HelperCreator
 
-**HelperCreator** é um pacote para Laravel que facilita o gerenciamento e autoload de helpers personalizados. Ele automatiza o registro no `composer.json`, cria backups e mantém seu projeto limpo e funcional.
+HelperCreator is a Laravel package that makes it easy to manage and autoload custom helpers. It automates registration in `composer.json`, creates backups, and keeps your project clean and functional.
 
 ---
 
 ## 🚀 Features
 
--   ✅ Registra automaticamente arquivos helper na chave `autoload.files` do `composer.json`
--   🧠 Cria e gerencia backups das últimas 3 versões do `composer.json`
--   🧹 Comando inteligente para limpar entradas inválidas
--   🔄 Restaura backups com segurança
--   🧱 Compatível com Laravel 11+
+-   ✅ Automatically registers helper files in the `autoload.files` key of `composer.json`
+-   🧠 Creates and manages backups of the last 3 versions of `composer.json`
+-   🧹 Smart command to clean up invalid entries
+-   🔄 Restores backups safely
+-   🧱 Compatible with Laravel 11+
 
 ---
 
@@ -27,9 +27,9 @@
 composer require elisame/helper-creator
 ```
 
-## ⚙️Configurações
+## ⚙️Settings
 
-Você pode rodar o comando para publicar o arquivo de configurações.
+You can run the command to publish the settings file.
 
 ```
 php artisan vendor:publish --tag=helper-creator-config
@@ -45,44 +45,44 @@ php artisan vendor:publish --tag=helper-creator-config
 php artisan helper:create MyNewHelper
 ```
 
-Isso criará o arquivo em `app/Helpers` e o registrará automaticamente no `composer.json`.
+This will create the file in `app/Helpers` and automatically register it in `composer.json`.
 
-### ♻️ Restaurar o último backup do composer.json
+### ♻️ Restore the last backup of composer.json
 
 ```
 php artisan helper:restore-backup
 ```
 
-Restaura a versão anterior do `composer.json` e atualiza o autoload.
+Restores the previous version of `composer.json` and updates autoload.
 
-## 🧹 Limpar entradas inválidas do autoload
+## 🧹 Clean up invalid autoload entries
 
 ```
 php artisan helper:cleanup
 ```
 
-Remove arquivos que foram excluídos manualmente mas que ainda estão listados no composer.json. Você pode usar a flag `--dry-run` para verificar o que será removido do arquivo `composer.json` sem fazer alterações.
+Removes files that were manually deleted but are still listed in composer.json. You can use the `--dry-run` flag to check what will be removed from the `composer.json` file without making any changes.
 
-## 📁 Estrutura gerada
+## 📁 Generated Structure
 
-Quando você criar um novo helper, você terá a seguinte estrutura dentro da raiz do seu projeto.
+When you create a new helper, you will have the following structure inside your project root.
 
 ```
 app/
 └── Helpers/
-    └── MyNewHelper.php
+└── MyNewHelper.php
 
 composer.json
 └── autoload.files
-    └── "app/Helpers/MyNewHelper.php"`
+└── "app/Helpers/MyNewHelper.php"`
 ```
 
-## 🛡️ Segurança
+## 🛡️ Security
 
-Antes de qualquer alteração no composer.json, o pacote cria backups automáticos em:
+Before any changes to `composer.json`, the package creates automatic backups in:
 
 ```
 storage/helper-creator/backups/composer
 ```
 
-Você pode restaurar qualquer versão anterior com segurança.
+You can safely restore any previous version.
